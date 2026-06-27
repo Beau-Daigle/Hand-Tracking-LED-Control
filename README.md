@@ -1,28 +1,63 @@
-This project contains a gesture tracking software that can control LED's based on the which fingers are up or down.
-Raising the pointer finger will light up the pointer finger LED, etc..
+# Hand Tracking LED Control
 
-In main.py the commented out section also acts as a drawing system, by pinching the thumb and pointer fingers.
+This project uses **OpenCV** and **MediaPipe** to track a user's hand in real time and control an Arduino-based LED array. Each finger corresponds to an LED, allowing finger gestures to control which LEDs are illuminated.
 
+## Features
 
-Hardware used:
-  Computer camera
-  Arduino nano
-  Breadboard and wires
-  LED's
+- Real-time hand tracking using MediaPipe
+- Finger state detection (up/down)
+- Serial communication between Python and an Arduino Nano
+- LED control based on detected finger positions
+- Optional virtual drawing mode using thumb and index finger pinch gestures
 
-Software used:
-  OpenCV
-  MediaPipe
-  Arduino
+## Demonstration
 
-To run this program, connect arduino to computer and upload the code from test.ino. Connect wires and LED's to pins 2-6, conect to ground and add resistance.
-Then run main.py and hand tracking software should begin.
+### LED Control
 
-## LED Demo
+![LED Demo](images/LEDDemoGIF.gif)
 
-![Drawing Demo](images/LEDDemoGIF.gif)
-
-
-## Drawing Demo
+### Virtual Drawing
 
 ![Drawing Demo](images/drawingGIF2.gif)
+
+## Hardware
+
+- Arduino Nano
+- USB webcam
+- Breadboard
+- LEDs
+- Current-limiting resistors
+- Jumper wires
+
+## Software
+
+- Python
+- OpenCV
+- MediaPipe
+- PySerial
+- Arduino IDE
+
+## Installation
+
+1. Upload `test.ino` to the Arduino Nano.
+2. Connect LEDs to digital pins **2–6**, each with a current-limiting resistor and a common ground.
+3. Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Run:
+
+```bash
+python main.py
+```
+
+The webcam will open and begin tracking your hand. Raising individual fingers will control the corresponding LEDs.
+
+## Future Improvements
+
+- Support multiple hand gestures
+- Gesture recognition using machine learning
+- RGB LED control
+- Additional hardware outputs (servos, relays, etc.)
