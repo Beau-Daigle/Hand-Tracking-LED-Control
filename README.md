@@ -20,4 +20,4 @@ run main.py and hand tracking software should begin.
 
 ## Drawing Demo
 
-![Drawing Demo](images/DrawingExampleGIF.gif)
+![Drawing Demo](images/drawingGIF.gif)
