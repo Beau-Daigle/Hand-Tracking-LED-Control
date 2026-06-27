@@ -18,6 +18,11 @@ Software used:
 To run this program, connect arduino to computer and upload the code from test.ino. Connect wires and LED's to pins 2-6, conect to ground and add resistance.
 Then run main.py and hand tracking software should begin.
 
+## LED Demo
+
+![Drawing Demo](images/LEDDemoGIF.gif)
+
+
 ## Drawing Demo
 
 ![Drawing Demo](images/drawingGIF.gif)
